@@ -1,0 +1,29 @@
+apt-get install git
+git --version
+mkdir demo3
+git config --global user.name "badrisake0312"
+root@ip-10-52-1-18:/demo3# git config --global user.email "badrisake0312@gmail.com"
+root@ip-10-52-1-18:/demo3# git config --list
+user.name=badrisake0312
+user.email=badrisake0312@gmail.com
+root@ip-10-52-1-18:/demo3# git init
+ls -a
+git status
+git add <filename>
+git add . --> to add all the files in this folder
+git commit -m "<message>" <filename>
+git log
+git remote add origin <URL>
+git branch
+git branch dev
+git branch QA
+git push origin master
+git branch QA
+git branch --> to check how many branches are there
+git checkout dev --> to switch to dev branch
+git branch -d QA --> to delete branch
+git clone <URL> --> to download remote repository
+git fetch <URL> --> to verify the same local code and remote code are same
+git pull <URL> --> to get new code which is not there in our local
+git merge --> we will get total commit history
+git rebase --> the old commit will replace by new commit id's
