@@ -1,0 +1,95 @@
+apt-get install git
+git --version
+mkdir samplerepo
+ls
+git config --global user.com "badrisake0312"
+git config --global user.email "badrisake0312@gmail.com"
+git config --list
+user.com=badrisake0312
+user.email=badrisake0312@gmail.com
+git init
+ls -a
+vi firstcode
+git status
+git add firstcode
+git status
+
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstcode
+
+git commit -m "firstfile" firstcode
+[master (root-commit) 805c581] firstfile
+ 1 file changed, 1 insertion(+)
+ create mode 100644 firstcode
+
+git status
+On branch master
+nothing to commit, working tree clean
+
+vi firstcode
+root@ip-10-52-1-47:/samplerepo# git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   firstcode
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@ip-10-52-1-47:/samplerepo# vi secondcode
+root@ip-10-52-1-47:/samplerepo# git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   firstcode
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        secondcode
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@ip-10-52-1-47:/samplerepo# git add firstcode
+root@ip-10-52-1-47:/samplerepo# git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   firstcode
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        secondcode
+
+root@ip-10-52-1-47:/samplerepo# git add .
+root@ip-10-52-1-47:/samplerepo# git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   firstcode
+        new file:   secondcode
+
+root@ip-10-52-1-47:/samplerepo# git commit -m "secondcode"
+[master 582bb46] secondcode
+ 2 files changed, 4 insertions(+)
+ create mode 100644 secondcode
+root@ip-10-52-1-47:/samplerepo# git status
+On branch master
+nothing to commit, working tree clean
+
+
+root@ip-10-52-1-47:/samplerepo# git log
+commit 582bb464a9cea11df71541e7a0ab710f57d02d16 (HEAD -> master)
+Author: root <badrisake0312@gmail.com>
+Date:   Tue Jan 28 20:58:27 2025 +0000
+
+    secondcode
+
+commit 805c5815afdb3704205af153de20e029acb1a291
+Author: root <badrisake0312@gmail.com>
+Date:   Tue Jan 28 20:47:22 2025 +0000
+
+    firstfile
